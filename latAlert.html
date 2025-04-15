@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alert Kedua</title>
+</head>
+<body>
+    <h1 id="hasil_pertambahan"></h1>
+    <h1 id="hasil_perkalian"></h1>
+    <h1 id="hasil_pengurangan"></h1>
+    <h1 id="hasil_pembagian"></h1>
+    <script>
+        let a = parseInt(prompt("INPUT BIl 1"))
+        let b = parseInt(prompt("INPUT Bil 2"))
+        let hasil = a + b
+        document.getElementById('hasil_pertambahan').innerHTML = "Hasil pertambahan Anda adalah = " + hasil
+        let hasil2 = a * b
+        document.getElementById('hasil_perkalian').innerHTML = "Hasil perkalian Anda adalah = " + hasil2
+        let hasil3 = a - b
+        document.getElementById('hasil_pengurangan').innerHTML = "Hasil penguarangan Anda adalah = " + hasil3
+        let hasil4 = a / b
+        document.getElementById('hasil_pembagian').innerHTML = "Hasil pembagian Anda adalah = " + hasil4
+    </script>
+    <h1><a href="index.html">BACK TO HOME</a></h1>
+
+</body>
+</html>
