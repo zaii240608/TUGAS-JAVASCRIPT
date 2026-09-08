@@ -1,152 +1,189 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TUGAS ZAHIR</title>
+    <title>Daftar Tugas JavaScript | Zahir</title>
     <style>
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            text-align: center;
+        :root {
+            --ink: #182230;
+            --muted: #64748b;
+            --paper: #f5f7fb;
+            --card: #ffffff;
+            --line: #e2e8f0;
+            --accent: #2563eb;
+            --accent-soft: #eff6ff;
         }
-        th , td {
-            border: 1px;
-            padding: 10px;
+
+        * {
+            box-sizing: border-box;
         }
-        th {
-            background-color: aliceblue;
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            color: var(--ink);
+            background: linear-gradient(135deg, #eaf2ff 0%, var(--paper) 42%, #f8fafc 100%);
+            font-family: "Trebuchet MS", "Segoe UI", sans-serif;
         }
-        caption {
-            caption-side: top;
-            font-size: 1.5em;
-            margin-bottom: 10px;
+
+        main {
+            width: min(920px, calc(100% - 32px));
+            margin: 0 auto;
+            padding: 64px 0 48px;
+        }
+
+        header {
+            margin-bottom: 28px;
+        }
+
+        .eyebrow {
+            margin: 0 0 10px;
+            color: var(--accent);
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            max-width: 620px;
+            margin: 0;
+            font-family: Georgia, serif;
+            font-size: clamp(2.3rem, 6vw, 4.4rem);
+            line-height: 0.98;
+        }
+
+        .intro {
+            max-width: 560px;
+            margin: 16px 0 0;
+            color: var(--muted);
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .task-list {
+            display: grid;
+            gap: 12px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .task {
+            display: grid;
+            grid-template-columns: 64px 1fr auto;
+            align-items: center;
+            gap: 18px;
+            padding: 18px 20px;
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            background: rgb(255 255 255 / 88%);
+            box-shadow: 0 8px 24px rgb(15 23 42 / 4%);
+            transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+        }
+
+        .task:hover {
+            border-color: #93c5fd;
+            box-shadow: 0 12px 28px rgb(37 99 235 / 12%);
+            transform: translateY(-2px);
+        }
+
+        .number {
+            display: grid;
+            width: 48px;
+            height: 48px;
+            place-items: center;
+            border-radius: 12px;
+            color: var(--accent);
+            background: var(--accent-soft);
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+
+        .task-title {
+            margin: 0;
+            font-size: 1rem;
+            line-height: 1.35;
+        }
+
+        .task-meta {
+            margin: 5px 0 0;
+            color: var(--muted);
+            font-size: 0.88rem;
+        }
+
+        .open-task {
+            padding: 9px 14px;
+            border: 1px solid #bfdbfe;
+            border-radius: 9px;
+            color: var(--accent);
+            background: var(--accent-soft);
+            font-size: 0.86rem;
+            font-weight: 700;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .open-task:hover,
+        .open-task:focus-visible {
+            color: #ffffff;
+            background: var(--accent);
+        }
+
+        @media (max-width: 560px) {
+            main {
+                width: min(100% - 20px, 920px);
+                padding-top: 40px;
+            }
+
+            .task {
+                grid-template-columns: 48px 1fr;
+                gap: 14px;
+                padding: 14px;
+            }
+
+            .number {
+                width: 42px;
+                height: 42px;
+            }
+
+            .open-task {
+                grid-column: 2;
+                justify-self: start;
+            }
         }
     </style>
 </head>
 <body>
-    <table>
-        <caption>TUGAS MUHAMMAD ZAHIR LUTHFII</caption>
-        <thead>
-            <tr>
-                <th>LINK</th>
-                <th>TUGAS</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><a href="lat1.html">TUGAS 1</a></td>
-                <td>TUGAS MEMUNCULKAN ALERT</td>
-            </tr>
-        </tbody>
-        <tbody>
-            <tr>
-                <td><a href="latAlert.html">TUGAS 2</a></td>
-                <td>TUGAS MEMUNCULKAN ALERT</td>
-            </tr>
-        </tbody>
-        <tbody>
-            <tr>
-                <td><a href="latluaspersegi.html">TUGAS 3</a></td>
-                <td>TUGAS RUMUS LUAS PERSEGI</td>
-            </tr>
-        </tbody>
-        <tbody>
-            <tr>
-                <td><a href="kelilingpersegi.html">TUGAS 4</a></td>
-                <td>TUGAS RUMUS KELILING PERSEGI</td>
-            </tr>
-        </tbody>
-        <tbody>
-            <tr>
-                <td><a href="luas&kelilingsegitiga.html">TUGAS 5</a></td>
-                <td>TUGAS LUAS DAN KELILING SEGITIGA</td>
-            </tr>
-        </tbody>
-        <tbody>
-            <tr>
-                <td><a href="luaslingkaran.html">TUGAS 6</a></td>
-                <td>TUGAS LUAS LINGKARAN</td>
-            </tr>
-        </tbody>
-        <tbody>
-            <tr>
-                <td><a href="latIF1.html">TUGAS 7</a></td>
-                <td>TUGAS LATIHAN IF</td>
-            </tr>
-        </tbody>
-        <tbody>
-            <tr>
-                <td><a href="pengujianIF1.html">TUGAS 8</a></td>
-                <td>TUGAS PENGUJIAN IF</td>
-            </tr>
-        </tbody>
-        <tbody>
-            <tr>
-                <td><a href="testIF.html">TUGAS 9</a></td>
-                <td>TUGAS NGETEST IF</td>
-            </tr>
-        </tbody>
-        <tbody>
-            <tr>
-                <td><a href="pelanggan.html">TUGAS 10</a></td>
-                <td>TUGAS MENGECEK PELANGGAN</td>
-            </tr>
-        </tbody>
-        <tbody>
-            <tr>
-                <td><a href="looping.html">TUGAS 11</a></td>
-                <td>TUGAS LOOPING KE 1</td>
-            </tr>
-        </tbody>
-        <tbody>
-            <tr>
-                <td><a href="hukuman.html">TUGAS 12</a></td>
-                <td>TUGAS MEMUNCULKAN HUKUMAN</td>
-            </tr>
-        </tbody>
-        <tbody>
-            <tr>
-                <td><a href="hukumanverdoc.html">TUGAS 13</a></td>
-                <td>TUGAS HUKUMAN VERSI DOCUMENT</td>
-            </tr>
-        </tbody>
-        <tbody>
-            <tr>
-                <td><a href="loopingP2.html">TUGAS 14</a></td>
-                <td>TUGAS LOOPING KE 2</td>
-            </tr>
-        </tbody>
-        <tbody>
-            <tr>
-                <td><a href="looopingP3.html">TUGAS 15</a></td>
-                <td>TUGAS LOOPING KE 3</td>
-            </tr>
-        </tbody>
-        <tbody>
-            <tr>
-                <td><a href="loopingP4.html">TUGAS 16</a></td>
-                <td>TUGAS LOOPING KE 4</td>
-            </tr>
-        </tbody>
-        <tbody>
-            <tr>
-                <td><a href="whilelooping.html">TUGAS 17</a></td>
-                <td>TUGAS WHILE LOOPING</td>
-            </tr>
-        </tbody>
-        <tbody>
-            <tr>
-                <td><a href="pyramidlooping.html">TUGAS 18</a></td>
-                <td>TUGAS PYRAMID LOOPING</td>
-            </tr>
-        </tbody>
-        <tbody>
-            <tr>
-                <td><a href="pyramidlooping.html">TUGAS 19</a></td>
-                <td>TUGAS LOOPING BERSARANG</td>
-            </tr>
-        </tbody>
-    </table>
+    <main>
+        <header>
+            <p class="eyebrow">Kumpulan latihan JavaScript</p>
+            <h1>Daftar Tugas<br>Muhammad Zahir Luthfii</h1>
+            <p class="intro">Pilih salah satu tugas untuk melihat hasil latihan dan mencoba programnya.</p>
+        </header>
+
+        <ol class="task-list">
+            <li class="task"><span class="number">01</span><div><h2 class="task-title">Memunculkan Alert</h2><p class="task-meta">Latihan dasar JavaScript</p></div><a class="open-task" href="dasar/lat1.html">Buka tugas</a></li>
+            <li class="task"><span class="number">02</span><div><h2 class="task-title">Memunculkan Alert</h2><p class="task-meta">Latihan alert lanjutan</p></div><a class="open-task" href="dasar/latAlert.html">Buka tugas</a></li>
+            <li class="task"><span class="number">03</span><div><h2 class="task-title">Rumus Luas Persegi</h2><p class="task-meta">Perhitungan luas bangun datar</p></div><a class="open-task" href="bangun-datar/latluaspersegi.html">Buka tugas</a></li>
+            <li class="task"><span class="number">04</span><div><h2 class="task-title">Rumus Keliling Persegi</h2><p class="task-meta">Perhitungan keliling bangun datar</p></div><a class="open-task" href="bangun-datar/kelilingpersegi.html">Buka tugas</a></li>
+            <li class="task"><span class="number">05</span><div><h2 class="task-title">Luas dan Keliling Segitiga</h2><p class="task-meta">Perhitungan bangun datar</p></div><a class="open-task" href="bangun-datar/luas&amp;kelilingsegitiga.html">Buka tugas</a></li>
+            <li class="task"><span class="number">06</span><div><h2 class="task-title">Luas Lingkaran</h2><p class="task-meta">Perhitungan luas bangun datar</p></div><a class="open-task" href="bangun-datar/luaslingkaran.html">Buka tugas</a></li>
+            <li class="task"><span class="number">07</span><div><h2 class="task-title">Latihan If</h2><p class="task-meta">Pengambilan keputusan dasar</p></div><a class="open-task" href="percabangan/latIF1.html">Buka tugas</a></li>
+            <li class="task"><span class="number">08</span><div><h2 class="task-title">Pengujian If</h2><p class="task-meta">Menguji kondisi program</p></div><a class="open-task" href="percabangan/pengujianIF1.html">Buka tugas</a></li>
+            <li class="task"><span class="number">09</span><div><h2 class="task-title">Ngetest If</h2><p class="task-meta">Latihan percabangan</p></div><a class="open-task" href="percabangan/testIF.html">Buka tugas</a></li>
+            <li class="task"><span class="number">10</span><div><h2 class="task-title">Mengecek Pelanggan</h2><p class="task-meta">Percabangan berdasarkan data</p></div><a class="open-task" href="percabangan/pelanggan.html">Buka tugas</a></li>
+            <li class="task"><span class="number">11</span><div><h2 class="task-title">Looping 1</h2><p class="task-meta">Perulangan dasar</p></div><a class="open-task" href="perulangan/looping.html">Buka tugas</a></li>
+            <li class="task"><span class="number">12</span><div><h2 class="task-title">Memunculkan Hukuman</h2><p class="task-meta">Latihan perulangan</p></div><a class="open-task" href="perulangan/hukuman.html">Buka tugas</a></li>
+            <li class="task"><span class="number">13</span><div><h2 class="task-title">Hukuman Versi Document</h2><p class="task-meta">Menampilkan hasil ke dokumen</p></div><a class="open-task" href="perulangan/hukumanverdoc.html">Buka tugas</a></li>
+            <li class="task"><span class="number">14</span><div><h2 class="task-title">Looping 2</h2><p class="task-meta">Latihan perulangan</p></div><a class="open-task" href="perulangan/loopingP2.html">Buka tugas</a></li>
+            <li class="task"><span class="number">15</span><div><h2 class="task-title">Looping 3</h2><p class="task-meta">Latihan perulangan</p></div><a class="open-task" href="perulangan/looopingP3.html">Buka tugas</a></li>
+            <li class="task"><span class="number">16</span><div><h2 class="task-title">Looping 4</h2><p class="task-meta">Latihan perulangan</p></div><a class="open-task" href="perulangan/loopingP4.html">Buka tugas</a></li>
+            <li class="task"><span class="number">17</span><div><h2 class="task-title">While Looping</h2><p class="task-meta">Perulangan dengan while</p></div><a class="open-task" href="perulangan/whilelooping.html">Buka tugas</a></li>
+            <li class="task"><span class="number">18</span><div><h2 class="task-title">Pyramid Looping</h2><p class="task-meta">Membuat pola dengan perulangan</p></div><a class="open-task" href="perulangan/pyramidlooping.html">Buka tugas</a></li>
+            <li class="task"><span class="number">19</span><div><h2 class="task-title">Looping Bersarang</h2><p class="task-meta">Perulangan di dalam perulangan</p></div><a class="open-task" href="perulangan/loopingbersarang.html">Buka tugas</a></li>
+        </ol>
+    </main>
 </body>
 </html>
